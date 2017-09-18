@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -25,16 +27,25 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation libraries.constraintLayout
+    implementation libraries.recyclerview
     implementation libraries.supportAppCompat
-    implementation libraries.constraintLayout
+    implementation libraries.supportDesign
 
-    implementation libraries.constraintLayout
+    implementation libraries.cardView
+    implementation libraries.room
+    implementation libraries.dagger
+    implementation libraries.rxJava
+    implementation libraries.rxAndroid
+    implementation libraries.roomRxJava
+    implementation libraries.butterknife
 
+    kapt libraries.daggerCompiler
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
