@@ -6,8 +6,11 @@ import krm.com.scottishpowertest.commons.di.components.DaggerAppComponent
 import krm.com.scottishpowertest.commons.di.module.AppModule
 import krm.com.scottishpowertest.commons.di.module.ContextModule
 import krm.com.scottishpowertest.commons.di.module.DatabaseModule
+import krm.com.scottishpowertest.commons.di.module.NetworkModule
 
 class MyApplication : Application() {
+
+    val API_URL : String = "https://jsonplaceholder.typicode.com/"
 
     companion object {
         lateinit var appComponent: AppComponent
@@ -21,6 +24,7 @@ class MyApplication : Application() {
                 .appModule(AppModule(this))
                 .databaseModule(DatabaseModule())
                 .contextModule(ContextModule(this))
+                .networkModule(NetworkModule(API_URL))
                 .build()
     }
 }

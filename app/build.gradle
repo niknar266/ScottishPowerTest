@@ -23,6 +23,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
@@ -33,14 +41,24 @@ dependencies {
     implementation libraries.supportDesign
 
     implementation libraries.cardView
-    implementation libraries.room
+    implementation "android.arch.persistence.room:rxjava2:1.0.0-alpha9-1"
     implementation libraries.dagger
     implementation libraries.rxJava
     implementation libraries.rxAndroid
+    implementation libraries.rxAdapter
     implementation libraries.roomRxJava
     implementation libraries.butterknife
 
+    implementation libraries.retroFit
+    implementation libraries.retroFitMoshi
+    implementation libraries.okhttp
+    implementation libraries.moshi
+    implementation libraries.picasso
+
+    implementation 'com.android.support:support-v4:26.1.0'
+    kapt libraries.roomAnnotations
     kapt libraries.daggerCompiler
+    kapt libraries.butterknifeCompiler
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
