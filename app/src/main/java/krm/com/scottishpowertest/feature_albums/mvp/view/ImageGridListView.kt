@@ -1,9 +1,9 @@
 package krm.com.scottishpowertest.feature_albums.mvp.view
 
-import krm.com.scottishpowertest.feature_albums.mvp.model.Picture
+import krm.com.scottishpowertest.feature_albums.mvp.model.Photo
 
 interface ImageGridListView : BaseListView {
-    fun loadImageDetail()
+    fun loadImageDetail(title : String, url : String)
 
-    fun setListAdapter(photoList: List<Picture>)
+    fun setListAdapter(photoList: List<Photo>)
 }

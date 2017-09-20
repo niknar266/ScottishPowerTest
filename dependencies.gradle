@@ -6,7 +6,7 @@ ext.versions = [
 
         supportLibs                  : '26.1.0',
         glide                        : '3.7.0',
-        room                         : '1.0.0-alpha9-1',
+        room                         : '1.0.0-alpha9',
         constraintLayout             : '1.0.2',
 
         dagger                       : '2.11',

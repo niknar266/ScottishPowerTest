@@ -3,8 +3,7 @@ package krm.com.scottishpowertest.feature_albums.mvp.view
 import krm.com.scottishpowertest.feature_albums.mvp.model.Album
 
 interface AlbumListView : BaseListView {
-    fun loadImageGridView()
+    fun loadImageGridView(albumId : String)
 
     fun setListAdapter(albumList: List<Album>)
-
 }

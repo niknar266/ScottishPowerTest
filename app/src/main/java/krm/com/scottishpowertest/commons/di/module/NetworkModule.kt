@@ -8,6 +8,7 @@ import krm.com.scottishpowertest.commons.network.APIService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import javax.inject.Inject
 import javax.inject.Singleton
 
 
@@ -15,25 +16,9 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule(private val baseURL : String) {
-
-//    @Provides
-//    @Singleton
-//    fun provideHttpCache(application: Application): Cache {
-//        val cacheSize = 10 * 1024 * 1024
-//        val cache = Cache(application.cacheDir, cacheSize.toLong())
-//        return cache
-//    }
-//
-//    @Provides
-//    @Singleton
-//    fun provideOkhttpClient(cache: Cache): OkHttpClient {
-//        val client = OkHttpClient.Builder()
-//        client.cache(cache)
-//        return client.build()
-//    }
-
     @Provides
     @Singleton
+    @Inject
     fun provideRetrofit(): APIService {
         val client = OkHttpClient.Builder().build()
 

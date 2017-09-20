@@ -30,4 +30,8 @@ class AlbumAdapter(private val mAlbumList: List<Album>, private val mListener: R
     override fun getItemCount(): Int {
         return mAlbumList.size
     }
+
+    fun getItemAt(position: Int) : Album {
+        return mAlbumList[position]
+    }
 }

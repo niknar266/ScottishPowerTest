@@ -22,8 +22,8 @@ class MyApplication : Application() {
         appComponent = DaggerAppComponent
                 .builder()
                 .appModule(AppModule(this))
-                .databaseModule(DatabaseModule())
                 .contextModule(ContextModule(this))
+                .databaseModule(DatabaseModule())
                 .networkModule(NetworkModule(API_URL))
                 .build()
     }

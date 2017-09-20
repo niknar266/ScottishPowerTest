@@ -20,6 +20,8 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -dontobfuscate
+-dontoptimize
+-dontwarn
 
 -keepclassmembers class ** {
   @com.squareup.moshi.FromJson *;
@@ -36,3 +38,21 @@
 
 -dontwarn okio.**
 -dontwarn retrofit2.Platform$Java8
+
+# ------------------- TEST DEPENDENCIES -------------------
+-dontwarn org.hamcrest.**
+-dontwarn android.test.**
+-dontwarn android.support.test.**
+
+-keep class org.hamcrest.** {
+   *;
+}
+
+-keep class org.junit.** { *; }
+-dontwarn org.junit.**
+
+-keep class junit.** { *; }
+-dontwarn junit.**
+
+-keep class sun.misc.** { *; }
+-dontwarn sun.misc.**

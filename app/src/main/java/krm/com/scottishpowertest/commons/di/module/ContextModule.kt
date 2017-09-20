@@ -7,12 +7,8 @@ import javax.inject.Singleton
 
 
 @Module
-class ContextModule(private var context: Context) {
-    var mContext: Context
-
-    init {
-        mContext = context
-    }
+class ContextModule(context: Context) {
+    var mContext: Context = context
 
     @Provides
     @Singleton

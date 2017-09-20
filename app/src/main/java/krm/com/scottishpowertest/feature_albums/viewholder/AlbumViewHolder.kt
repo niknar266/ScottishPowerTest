@@ -5,7 +5,7 @@ import android.view.View
 import krm.com.scottishpowertest.commons.utils.RecyclerViewClickListener
 
 class AlbumViewHolder(itemView: View, private val mListener : RecyclerViewClickListener) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-   init {
+    init {
         itemView.setOnClickListener(this)
     }
 

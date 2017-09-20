@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import krm.com.scottishpowertest.commons.utils.RecyclerViewClickListener
 
-class PictureViewHolder(itemView: View, private val mListener : RecyclerViewClickListener) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+class PhotoViewHolder(itemView: View, private val mListener : RecyclerViewClickListener) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
     init {
         itemView.setOnClickListener(this)
     }
