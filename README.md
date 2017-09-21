@@ -13,4 +13,9 @@ List of recommended future improvements in the app.
 * Adding and Uploading albums and pictures (if it were a real service) left the skeleton of this in codebase including a FAB (Non-functional) to add the album/photos
 *	Tests both unit and integration if I had more time.
 *	Caching image to save on more network calls.
+*   Autosizing text size to compensate for increased text size and small devices.
+
+Project was compiled with Android Studio 3.0 Beta 6 in case there is trouble comiling it.
+
+
 
